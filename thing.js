@@ -45,3 +45,29 @@ function askTime(){
     return userTimeInFunction;
 }
 var userTime = askTime();
+
+while(!(userTime >= 0 && userTime <= 24)){
+    userTime = askTime();
+}
+
+var wannaPlay = prompt('Do you want to play a gussing game, enter 1, if not enter 2');
+  
+
+var correctAnswer = 12;
+
+
+while(wannaPlay == 1){
+    for (var i = 0; i < 10; i = i + 1){
+        var userAnswer = prompt('Please enter a number between 1 and 20');
+        if(userAnswer == correctAnswer){
+            wannaPlay = prompt('DING DING DING.  You got it right. Wanna play again?1 for yes, 2 for no');
+            break;
+        } else {        
+            if (userAnswer < correctAnswer){
+                alert('Incorrect, to low.  Try Again.');
+            } else {
+                alert('Incorrect, to high.  Try Again.');
+            }
+        }
+    }
+}
