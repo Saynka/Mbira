@@ -15,3 +15,33 @@ if (hourNow > 18) {
     greeting = 'Welcome!';
 }
 document.write('<h3>' + greeting + '</h3>');
+
+function getuserName(){
+    var userNameInFunction = prompt('What is your name?');
+    alert('Hello There...' + userNameInFunction);
+    document.write('<h2>' + userNameInFunction + '</h2>');
+    return userNameInFunction;
+}
+var userName = getuserName();
+
+function confirmAskQuestions(){
+    confirm(userName + ' I am going to ask you some questions!');
+}
+confirmAskQuestions();
+
+function askQuestion(){
+    var userCodeAnswer = prompt('Do you enjoy writing code? (yes or no)');
+    if (userCodeAnswer == "yes"){
+        alert('I do too');
+    } else {
+        alert('That is too bad.  It is so much fun');
+    }
+}
+askQuestion();
+
+
+function askTime(){
+    var userTimeInFunction = prompt('What hour is it in military time 0-24?');
+    return userTimeInFunction;
+}
+var userTime = askTime();
