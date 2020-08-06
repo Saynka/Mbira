@@ -1,3 +1,6 @@
+
+var alertstring = ""
+
 var today = new Date();
 // var hourNow = today.getHours();
 var hourNow = prompt("hello");
@@ -18,7 +21,8 @@ document.write('<h3>' + greeting + '</h3>');
 
 function getuserName(){
     var userNameInFunction = prompt('What is your name?');
-    alert('Hello There...' + userNameInFunction);
+    alertstring += ('Hello There...' + userNameInFunction + '. ')
+    alert(alertstring);
     document.write('<h2>' + userNameInFunction + '</h2>');
     return userNameInFunction;
 }
@@ -32,9 +36,11 @@ confirmAskQuestions();
 function askQuestion(){
     var userCodeAnswer = prompt('Do you enjoy writing code? (yes or no)');
     if (userCodeAnswer == "yes"){
-        alert('I do too');
+        alertstring += 'u awnswer ' + userCodeAnswer + ' to weather you like code. i do to. '
+        alert(alertstring);
     } else {
-        alert('That is too bad.  It is so much fun');
+        alertstring += 'That is too bad. that you said ' + userCodeAnswer + '. It is so much fun'
+        alert(alertstring);
     }
 }
 askQuestion();
@@ -42,6 +48,8 @@ askQuestion();
 
 function askTime(){
     var userTimeInFunction = prompt('What hour is it in military time 0-24?');
+    alertstring += 'u said the time ' + userTimeInFunction + ' ....thats a nice time'
+    alert(alertstring);
     return userTimeInFunction;
 }
 var userTime = askTime();
